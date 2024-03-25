@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TU</title>
+    <style>
+        body { margin:0; }
+        .Home01 {
+            background-color:#f04;
+            padding:10px 100px;
+            text-align:center;
+        }
+        .Home02 {
+            background-color:#faa;
+            padding:50px 100px;
+        }
+        th { background-color:#f04; padding:10px; }
+        td { background-color:white; padding:10px; }
+        .Menu {
+            background-color:white;
+            padding:10px 30px;
+            border-radius:10px;
+            color:#f04;
+        }
+    </style>
+</head>
+<body>
+<div class="Home01">
+    <font color="yellow" size="6"> SCHOOL OF ARTS AND SCIENCE </font><br>
+    <font color="white" size="7">Department of Computational and Data Science</font><br><br>
+    <a href="/Students" class="Menu">Home</a>
+    <a href="/Students" class="Menu">Students</a>
+    <a href="/Students" class="Menu">Faculties</a>
+    <a href="/Students" class="Menu">Subjects</a>
+    <a href="/Students" class="Menu">CAT/MCQ</a>
+    <a href="/Students" class="Menu">University</a>
+    <a href="/Students" class="Menu">About us</a>
+</div>
+<div class="Home02">
+    <h3>Student Details</h3>
+    <a href="/StudentEntry">New Student Entry</a>
+    <table>
+        <tr>
+            <th>Register No</th>
+            <th>Student Name</th>
+            <th>City</th>
+        </tr>
+    {% for row in data %}
+        <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+</body>
+</html>
